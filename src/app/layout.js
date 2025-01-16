@@ -3,6 +3,8 @@ import "./globals.css";
 import Header from "./components/Header";
 import ThemeCon from "./components/ThemeCon";
 import { ClerkProvider } from "@clerk/nextjs";
+// import Navbar from "@/components/Navbar";
+// import SearchBox from "@/components/SearchBox";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,10 +24,13 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
-      <html lang="en">
+      <html lang="en" suppressHydrationWarning>
         <body>
           <ThemeCon>
             <Header />
+            {/* <Navbar /> */}
+            {/* <SearchBox /> */}
+            {children}
           </ThemeCon>
         </body>
       </html>
