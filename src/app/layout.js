@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "./components/Header";
 import ThemeCon from "./components/ThemeCon";
 import { ClerkProvider } from "@clerk/nextjs";
+import Navbar from "./components/Navbar";
 // import Navbar from "@/components/Navbar";
 // import SearchBox from "@/components/SearchBox";
 
@@ -28,7 +29,7 @@ export default function RootLayout({ children }) {
         <body>
           <ThemeCon>
             <Header />
-            {/* <Navbar /> */}
+            <Navbar />
             {/* <SearchBox /> */}
             {children}
           </ThemeCon>
